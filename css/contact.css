@@ -1,0 +1,239 @@
+.contact {
+  margin-top: 7rem;
+  margin-bottom: 7rem;
+}
+
+.contact__wrapper {
+  background-color: var(--bg-1);
+  height: 30rem;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  gap: 3rem;
+  padding: 4rem;
+  margin: 3rem auto;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  position: relative;
+}
+
+/*========== Aside <Contact Info> Section ==========*/
+.contact__info {
+  background-color: var(--primary);
+  padding: 2rem;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  position: relative;
+  bottom: 10rem;
+}
+
+@media (max-width: 1024px) {
+  .contact__info {
+    bottom: 9rem;
+  }
+}
+
+.contact__img {
+  width: 18rem;
+  max-width: 100%;
+  margin: 0 auto 2rem;
+}
+
+.contact__head {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.contact__des {
+  line-height: 1.4;
+  margin-bottom: 2rem;
+  font-size: 15px;
+}
+
+.contact__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.6rem;
+  margin-bottom: 2rem;
+}
+
+.contact__item {
+  display: flex;
+  align-items: center;
+  column-gap: 0.8rem;
+}
+
+.contact__item > i {
+  font-size: 22px;
+}
+
+.contact__item > h5 {
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.contact__socials {
+  display: flex;
+  align-items: center;
+  column-gap: 0.7rem;
+}
+
+.contact__socials a {
+  background-color: var(--white);
+  color: var(--bg-2);
+  padding: 0.2rem 0.4rem;
+  font-size: 20px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+
+.contact__socials a:hover {
+  background-color: var(--bg-2);
+  color: var(--white);
+}
+
+/*========== Contact Form Section ==========*/
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-right: 2rem;
+}
+
+.form__name {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--bg);
+  color: var(--white);
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  font-size: 15px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1;
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+
+input:focus::placeholder,
+textarea:focus::placeholder {
+  opacity: 0;
+}
+
+input[type="text"] {
+  width: 50%;
+  max-width: 100%;
+}
+
+textarea {
+  resize: none;
+}
+
+button[type="submit"] {
+  width: max-content;
+  display: flex !important;
+  align-items: center !important;
+  column-gap: 0.5rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+button[type="submit"] > i {
+  font-size: 18px;
+}
+
+/*========== <Media Query> Tablet Screens ==========*/
+@media (max-width: 960px) {
+  .contact {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .contact__wrapper {
+    height: auto;
+    gap: 1.5rem;
+    margin-top: 3rem;
+    padding: 1.5rem;
+  }
+
+  .contact__info {
+    width: auto;
+    padding: 1.5rem;
+    bottom: 0;
+  }
+
+  .contact__form {
+    align-self: center;
+    margin-right: 1.5rem;
+  }
+}
+
+@media (max-width: 770px) {
+  .contact__wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contact__form {
+    align-self: center;
+    margin-right: 0;
+  }
+
+  .form__name {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form__name input[type="text"] {
+    width: 100%;
+  }
+
+  button[type="submit"] {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/*========== <Media Query> Phone Screens ==========*/
+@media (max-width: 600px) {
+  .contact {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .contact__wrapper {
+    grid-template-columns: 1fr;
+    margin: 1rem auto;
+  }
+}
